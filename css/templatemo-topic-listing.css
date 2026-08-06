@@ -10,24 +10,25 @@ https://templatemo.com/tm-590-topic-listing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  /* ---- Pro Telecom brand palette: Deep Navy + Electric Cyan ---- */
+  /* ---- Pro Telecom brand palette: Midnight + Emerald ---- */
   --white-color:                  #FFFFFF;
-  --primary-color:                #0B2B4E;  /* navy  - headings, links, active states */
-  --secondary-color:              #102A43;  /* ink   - dark surfaces, footer accents  */
-  --section-bg-color:             #102A43;  /* ink   - .section-bg                    */
-  --custom-btn-bg-color:          #1B6CA8;  /* blue  - button fill, gradient end      */
-  --custom-btn-bg-hover-color:    #00B8D9;  /* cyan  - button hover fill              */
-  --dark-color:                   #0B2B4E;  /* navy  - h2-h6                          */
-  --p-color:                      #5A6B7C;  /* gray  - body copy                      */
-  --border-color:                 #DCE6F0;  /* hairline rules on light surfaces       */
-  --link-hover-color:             #1B6CA8;  /* blue  - a:hover on LIGHT surfaces      */
+  --primary-color:                #12463C;  /* emerald - headings, links, active states */
+  --secondary-color:              #0F2027;  /* slate   - dark surfaces, footer accents  */
+  --section-bg-color:             #0F2027;  /* slate   - .section-bg                    */
+  --custom-btn-bg-color:          #1E5B4F;  /* green   - button fill, gradient end      */
+  --custom-btn-bg-hover-color:    #34D399;  /* mint    - button hover fill              */
+  --dark-color:                   #12463C;  /* emerald - h2-h6                          */
+  --p-color:                      #5F6B6A;  /* gray    - body copy                      */
+  --border-color:                 #DCE8E3;  /* hairline rules on light surfaces         */
+  --link-hover-color:             #1E5B4F;  /* green   - a:hover on LIGHT surfaces      */
 
-  /* cyan is a surface/border/dark-bg accent only: it is 2.37:1 on white
-     and 2.36:1 on the gradient's blue end, so it is never body text there */
-  --accent-color:                 #00B8D9;  /* cyan  - accents, borders, dark-bg text */
-  --accent-on-dark-color:         #B8F1FA;  /* pale cyan - AA-safe hover on gradient  */
-  --gradient-start:               #0B2B4E;
-  --gradient-end:                 #1B6CA8;
+  /* Mint is a surface, border and dark-background accent only. It is 1.92:1
+     on white and only 4.10:1 on the gradient's green end, so text sitting on
+     the gradient uses the paler tint below (6.15:1) instead. */
+  --accent-color:                 #34D399;  /* mint      - accents, borders, on slate  */
+  --accent-on-dark-color:         #A7F3D0;  /* pale mint - AA-safe text on the gradient */
+  --gradient-start:               #0F2027;
+  --gradient-end:                 #1E5B4F;
 
   --body-font-family:             'Open Sans', sans-serif;
   --title-font-family:            'Montserrat', sans-serif;
@@ -297,7 +298,7 @@ strong {
 
 .navbar {
   background: transparent;
-  border-bottom: 1px solid rgba(0, 184, 217, 0.35); /* var(--accent-color) @ 35% */
+  border-bottom: 1px solid rgba(52, 211, 153, 0.35); /* var(--accent-color) @ 35% */
   z-index: 9;
 }
 
@@ -338,7 +339,7 @@ strong {
 
 .navbar .dropdown-menu {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(11, 43, 78, 0.18);
+  box-shadow: 0 1rem 3rem rgba(15, 32, 39, 0.18);
   border: 0;
   display: inherit;
   opacity: 0;
@@ -1153,9 +1154,9 @@ blockquote {
 
 /*---------------------------------------
   PRO TELECOM THEME OVERRIDES
-  Navy/cyan palette adjustments. Placed last so they win ties on
-  source order. Cyan (#00B8D9) is 2.37:1 on white and 2.36:1 on the
-  gradient's blue end, so it is used as a surface, border and
+  Midnight/emerald palette adjustments. Placed last so they win ties on
+  source order. Mint (#34D399) is 1.92:1 on white and 4.10:1 on the
+  gradient's green end, so it is used as a surface, border and
   dark-background accent only -- never as text on a light surface.
 -----------------------------------------*/
 
@@ -1212,8 +1213,8 @@ blockquote {
   color: var(--primary-color);
 }
 
-/* The navbar sits on the top of the gradient, which is the #1B6CA8 end.
-   Cyan is only 2.36:1 there, so the paler tint is used instead (4.53:1). */
+/* The navbar sits on the top of the gradient, which is the #1E5B4F end.
+   Mint is only 4.10:1 there, so the paler tint is used instead (6.15:1). */
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--accent-on-dark-color);
@@ -1265,7 +1266,7 @@ blockquote {
   max-width: 40%;
 }
 
-/* White on cyan is 2.37:1, so button text flips to navy on hover
+/* White on mint is 1.92:1, so button text flips to deep emerald on hover
    rather than dimming the accent */
 .custom-btn:hover,
 .custom-form button[type="submit"]:hover,
@@ -1275,13 +1276,20 @@ blockquote {
 
 /* Retint Bootstrap's stock accordion blue (#0c63e4 / #e7f1ff) */
 .faq-section .accordion {
-  --bs-accordion-active-bg: #EAF2FA;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230B2B4E'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-active-bg: #E8F5F0;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2312463C'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-/* The coral in this illustration is a near-complement of the cyan accent */
+/* The coral in this illustration is a near-complement of the mint accent */
 .faq-section .faq-image {
   filter: saturate(.45) contrast(1.05);
+}
+
+/* The unDraw illustration ships with an azure accent. Rotating the hue into
+   the emerald family costs nothing: the rest of the artwork is achromatic,
+   so hue-rotate leaves it untouched. */
+.topics-detail-block-image {
+  filter: hue-rotate(-45deg);
 }
 
 /* .site-footer::after paints a 200px triangle over the copyright line */
